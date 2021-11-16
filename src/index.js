@@ -5,6 +5,7 @@ import MenuScene from "./scenes/MenuScene";
 import PreloadScene from "./scenes/PreloadScene";
 import ScoreScene from './scenes/ScoreScene'
 import PauseScene from './scenes/PauseScene'
+import ControlsScene from "./scenes/ControlsScene";
 const WIDTH = 800
 const HEIGHT = 600
 const BIRD_POSITION = {x: WIDTH/10, y: HEIGHT/2}
@@ -13,10 +14,11 @@ const BIRD_POSITION = {x: WIDTH/10, y: HEIGHT/2}
 const SHARED_CONFIG = {
   width: WIDTH,
   height: HEIGHT,
-  startingPosition: BIRD_POSITION
+  startingPosition: BIRD_POSITION,
+  fontStyling: {fontSize: '32px'}
 }
   
-const Scenes = [PreloadScene, MenuScene,  ScoreScene, PlayScene, PauseScene]
+const Scenes = [PreloadScene, MenuScene, ControlsScene,  ScoreScene, PlayScene, PauseScene]
 function createScene(scene){
   return new scene(SHARED_CONFIG)
 }
@@ -29,7 +31,8 @@ const config = {
   physics: {
     default: 'arcade',
     arcade: {
-      gravity: { y: 0 }
+      gravity: { y: 0 },
+      debug: true
     }
   },
   scene: initScene

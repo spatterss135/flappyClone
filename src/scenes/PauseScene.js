@@ -24,6 +24,7 @@ class PauseScene extends BaseScene {
             if (menuButton.text === 'Resume') {
                 this.scene.stop()
                 this.scene.resume(scene)
+                console.log(scene)
                 
             }
             else {

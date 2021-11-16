@@ -12,7 +12,8 @@ class BaseScene extends Phaser.Scene {
     }
 
     addBG (){
-        this.add.image(this.config.width/2, this.config.height/2, 'sky');
+        this.add.image(this.config.width/2, this.config.height/2, 'sky')
+        .setScale(0.5);
     }
 
     createMenu(menu, setupMenuEvents) {
