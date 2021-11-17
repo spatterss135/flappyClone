@@ -5,7 +5,7 @@ class PauseScene extends BaseScene {
         super('PauseScene', config)
 
         this.menu = [
-            {scene: 'PlayScene', text: 'Resume'},
+            {scene: 'PlayScene', text: 'RESUME'},
             {scene: 'MenuScene', text: 'EXIT'}
         ]
     }

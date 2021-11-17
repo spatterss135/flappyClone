@@ -16,14 +16,28 @@ class MenuScene extends BaseScene {
     create() {
         super.create()
         // this.scene.start('PlayScene')
-        this.createMenu(this.menu, this.setUpButtonFunctionality.bind(this))
+        
+        let menuMusic = this.sound.add('menu-music')
+        console.log(menuMusic)
+        menuMusic.play()
+        this.createMenu(this.menu, this.setUpButtonFunctionality.bind(this), menuMusic)
+        
+        
     }
 
-    setUpButtonFunctionality(menuButton, scene) {
+    setUpButtonFunctionality(menuButton, scene, music) {
+        console.log(music)
         menuButton.setInteractive()
-        menuButton.on('pointerover', () => menuButton.setStyle({fill: "#000"}))
+        menuButton.on('pointerover', () => {
+            this.sound.add('click').play()
+            menuButton.setStyle({fill: "#000"})})
         menuButton.on('pointerout', () => menuButton.setStyle({fill: "#fff"}))
-        menuButton.on('pointerdown', () =>this.scene.start(scene))
+        menuButton.on('pointerdown', () =>{
+            if (menuButton.text === 'PLAY') {
+                
+            }
+            console.log()
+            this.scene.start(scene)})
         
     }
 

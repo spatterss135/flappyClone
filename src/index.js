@@ -6,6 +6,7 @@ import PreloadScene from "./scenes/PreloadScene";
 import ScoreScene from './scenes/ScoreScene'
 import PauseScene from './scenes/PauseScene'
 import ControlsScene from "./scenes/ControlsScene";
+import GameOverScene from "./scenes/GameOverScene";
 const WIDTH = 800
 const HEIGHT = 600
 const BIRD_POSITION = {x: WIDTH/10, y: HEIGHT/2}
@@ -15,10 +16,10 @@ const SHARED_CONFIG = {
   width: WIDTH,
   height: HEIGHT,
   startingPosition: BIRD_POSITION,
-  fontStyling: {fontSize: '32px'}
+  fontStyling: {fontSize: '32px', fill: '#fff'}
 }
   
-const Scenes = [PreloadScene, MenuScene, ControlsScene,  ScoreScene, PlayScene, PauseScene]
+const Scenes = [PreloadScene, MenuScene, ControlsScene,  ScoreScene, PlayScene, PauseScene, GameOverScene]
 function createScene(scene){
   return new scene(SHARED_CONFIG)
 }
@@ -32,7 +33,7 @@ const config = {
     default: 'arcade',
     arcade: {
       gravity: { y: 0 },
-      debug: true
+      debug: false
     }
   },
   scene: initScene
@@ -40,3 +41,4 @@ const config = {
 
 new Phaser.Game(config);
 
+export default SHARED_CONFIG;
