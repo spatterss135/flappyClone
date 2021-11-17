@@ -4,7 +4,7 @@ Welcome to FlappyClone! This game started off as a clone of Flappy Bird, somethi
 So I dismantled a lot of the aspects of the game, and changed it into whats now more closely resembles Galaga. The point of the game is to kill as many enemies as you can 
 and not die in the process. The highest score will be saved into your local storage.
 
-![OOps](https://github.com/spatterss135/flappyClone/blob/master/image.jpg?raw=true)
+![OOps](assets\screenshots\gameplay.png?raw=true)
 
 
 
