@@ -1,7 +1,7 @@
 import BaseScene from './BaseScene'
 import BasicJet from '../enemyClasses/BasicJet'
-import HomingBug from '../enemyClasses/homingBug'
-import SpaceCruiser from '../enemyClasses/spaceCruiser';
+import HomingBug from '../enemyClasses/HomingBug'
+import SpaceCruiser from '../enemyClasses/SpaceCruiser';
 
 let serializedBestScore = localStorage.getItem('high-score')
 class PlayScene extends BaseScene {
